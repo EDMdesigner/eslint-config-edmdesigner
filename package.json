@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-edmdesigner",
+  "version": "1.0.0",
+  "description": "ESlint config for all EDMdesigner repositories",
+  "main": "index.js",
+  "author": "Turbo",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "eslint": ">= 5"
+  }
+}
