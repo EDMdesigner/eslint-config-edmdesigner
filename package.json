@@ -9,6 +9,10 @@
     "eslintconfig"
   ],
   "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext .js,.json src",
+    "lint-fix": "eslint --ext .js,.json src --fix"
+  },
   "peerDependencies": {
     "eslint": ">= 5"
   }
