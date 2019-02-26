@@ -19,5 +19,6 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed', { 'requireReturnForObjectLiteral': true }],
     'consistent-return': 'warn',
     'prefer-promise-reject-errors': 'warn',
+    'no-await-in-loop': 'warn',
   },
 };
