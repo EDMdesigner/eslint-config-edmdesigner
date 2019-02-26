@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-edmdesigner",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "ESlint base config for EDMdesigner repositories",
   "main": "index.js",
   "author": "Turbo",
