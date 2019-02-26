@@ -12,7 +12,9 @@ module.exports = {
     'no-console': 'off',
     'no-throw-literal': 'off',
     'no-return-await': 'off',
-    'consistent-return': 'warn',
+    'no-underscore-dangle': 'off',
     'arrow-body-style': ['error', 'as-needed', { 'requireReturnForObjectLiteral': true }],
+    'consistent-return': 'warn',
+    'prefer-promise-reject-errors': 'warn',
   },
 };
