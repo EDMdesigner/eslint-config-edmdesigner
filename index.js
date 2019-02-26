@@ -8,6 +8,9 @@ module.exports = {
   env: {
     es6: true,
   },
+  plugins: [
+    'json',
+  ],
   rules: {
     'no-console': 'off',
     'no-throw-literal': 'off',
