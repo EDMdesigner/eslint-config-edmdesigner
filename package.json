@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-edmdesigner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESlint base config for EDMdesigner repositories",
   "main": "index.js",
   "author": "Turbo",
@@ -17,6 +17,8 @@
     "eslint": ">= 5"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^13.1.0"
+    "babel-eslint": "^10.0.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   }
 }
