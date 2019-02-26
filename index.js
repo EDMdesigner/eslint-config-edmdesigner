@@ -3,6 +3,7 @@ module.exports = {
   root: true,
   parserOptions: {
     ecmaVersion: 6,
+    parser: 'babel-eslint',
   },
   env: {
     es6: true,
@@ -13,5 +14,5 @@ module.exports = {
     'no-return-await': 'off',
     'consistent-return': 'warn',
     'arrow-body-style': ['error', 'as-needed', { 'requireReturnForObjectLiteral': true }],
-  }
+  },
 };
