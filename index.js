@@ -1,24 +1,26 @@
 module.exports = {
-  extends: 'airbnb-base',
+  extends: "airbnb-base",
   root: true,
   parserOptions: {
     ecmaVersion: 8,
-    parser: 'babel-eslint',
+    parser: "babel-eslint",
   },
   env: {
     es6: true,
   },
   plugins: [
-    'json',
+    "json",
   ],
   rules: {
-    'no-console': 'off',
-    'no-throw-literal': 'off',
-    'no-return-await': 'off',
-    'no-underscore-dangle': 'off',
-    'arrow-body-style': ['error', 'as-needed', { 'requireReturnForObjectLiteral': true }],
-    'consistent-return': 'warn',
-    'prefer-promise-reject-errors': 'warn',
-    'no-await-in-loop': 'warn',
+    quotes: ["error", "double"],
+    indent: ["error", "tab"],
+    "no-tabs": "off",
+    "no-console": "off",
+    "no-throw-literal": "off",
+    "no-return-await": "off",
+    "no-underscore-dangle": "off",
+    "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+    "consistent-return": "warn",
+    "prefer-promise-reject-errors": "warn",
   },
 };
