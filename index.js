@@ -33,6 +33,8 @@ module.exports = {
 
 		// COMPLEXITY
 
+		"max-len": ["warn", 120],
+		// "max-lines": ["warn", { max: 500 }],
 		// complexity: ["warn", 20],
 		// "max-statements": ["warn", 40, { ignoreTopLevelFunctions: true }],
 
@@ -51,8 +53,6 @@ module.exports = {
 		"vue/html-indent": ["error", "tab"],
 		"vue/script-indent": ["error", "tab"],
 
-		"max-len": ["warn", 120],
-		"max-lines": ["warn", { max: 500 }],
 		"no-multiple-empty-lines": ["error", { max: 1, maxBOF: 0, maxEOF: 0 }],
 		"lines-between-class-members": ["error", "always"],
 		"padded-blocks": ["error", "never"],
@@ -172,9 +172,9 @@ module.exports = {
 				"jest/expect-expect": "error",
 				"jest/no-alias-methods": "error",
 				"jest/no-commented-out-tests": "error",
-				"jest/no-disabled-tests": "error",
+				"jest/no-disabled-tests": "warn",
 				"jest/no-export": "error",
-				"jest/no-focused-tests": "error",
+				"jest/no-focused-tests": "warn",
 				"jest/no-identical-title": "error",
 				"jest/no-jasmine-globals": "error",
 				"jest/no-jest-import": "error",
