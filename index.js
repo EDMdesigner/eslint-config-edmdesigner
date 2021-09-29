@@ -26,14 +26,14 @@ module.exports = {
 		"no-param-reassign": "error",
 		"no-return-assign": ["error", "always"],
 		"no-await-in-loop": "error",
-		curly: ["error", "all"],
+		curly: ["error", "multi"],
 		eqeqeq: "error",
 		"vue/eqeqeq": "error",
 		"no-implicit-coercion": ["error", { allow: [ "!!" ] }],
 
 		// COMPLEXITY
 
-		"max-len": ["warn", 120],
+		// "max-len": ["warn", 120],
 		// "max-lines": ["warn", { max: 500 }],
 		// complexity: ["warn", 20],
 		// "max-statements": ["warn", 40, { ignoreTopLevelFunctions: true }],
