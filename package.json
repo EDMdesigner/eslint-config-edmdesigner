@@ -1,6 +1,6 @@
 {
   "name": "@EDMdesigner/eslint-config-edmdesigner",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ESlint base config for EDMdesigner repositories",
   "main": "index.js",
   "author": "Turbo",
@@ -16,7 +16,7 @@
   "peerDependencies": {
     "eslint": ">= 5"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "7.32.0",
     "eslint-plugin-jest": "22.4.1",
