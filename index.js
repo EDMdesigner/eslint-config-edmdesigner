@@ -26,7 +26,7 @@ module.exports = {
 		"no-param-reassign": "error",
 		"no-return-assign": ["error", "always"],
 		"no-await-in-loop": "error",
-		curly: ["error", "multi"],
+		curly: ["error", "multi-line"],
 		eqeqeq: "error",
 		"vue/eqeqeq": "error",
 		"no-implicit-coercion": ["error", { allow: [ "!!" ] }],
