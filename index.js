@@ -148,6 +148,7 @@ module.exports = {
 		"vue/require-direct-export": "error",
 		"vue/v-slot-style": ["error", { atComponent: "v-slot", default: "shorthand", named: "shorthand" }],
 		"vue/valid-v-slot": "error",
+		"vue/script-indent": ["error", "tab", { switchCase: 1 }],
 	},
 	overrides: [
 		{
