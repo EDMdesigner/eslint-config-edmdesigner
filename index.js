@@ -139,7 +139,7 @@ module.exports = {
 
 		// VUE
 
-		"vue/script-indent": ["error", "tab", { switchCase: 1 }], "vue/max-attributes-per-line": ["error", { singleline: { max: 2, allowFirstLine: true, }, multiline: { max: 1, allowFirstLine: false, }, }],
+		"vue/max-attributes-per-line": ["error", { singleline: { max: 2, allowFirstLine: true, }, multiline: { max: 1, allowFirstLine: false, }, }],
 		"vue/component-name-in-template-casing": ["error", "PascalCase", { registeredComponentsOnly: false, ignores: ["/^v-/", "/^router-/", "template", "slot", "component", "transition"] }],
 		"vue/match-component-file-name": ["error", { extensions: ["js", "vue"], shouldMatchCase: true }],
 		"vue/no-boolean-default": ["error", "default-false"],
