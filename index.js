@@ -23,7 +23,7 @@ module.exports = {
 
 		"no-extend-native": "error",
 		"no-use-before-define": ["error", { functions: false }],
-		"no-param-reassign": "error",
+		"no-param-reassign": ["error", { "props": false }],
 		"no-return-assign": ["error", "always"],
 		"no-await-in-loop": "error",
 		curly: ["error", "multi-line"],
@@ -41,7 +41,7 @@ module.exports = {
 		// GLOBAL
 
 		"no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-		"eol-last": ["error", "never"],
+		"eol-last": ["error", "always"],
 		"no-duplicate-imports": "error",
 		"no-unused-vars": ["error", { ignoreRestSiblings: true }],
 		"no-throw-literal": "error",
@@ -80,6 +80,7 @@ module.exports = {
 		quotes: ["error", "double", { avoidEscape: true }],
 		"brace-style": ["error", "1tbs"],
 		"vue/brace-style": ["error", "1tbs"],
+		"space-infix-ops": ["error", { "int32Hint": false }],
 
 		// EXPRESSIONS
 
@@ -138,9 +139,6 @@ module.exports = {
 
 		// VUE
 
-		"vue/singleline-html-element-content-newline": "off",
-		"vue/max-attributes-per-line": "off",
-		"vue/attributes-order": "off",
 		"vue/component-name-in-template-casing": ["error", "PascalCase", { registeredComponentsOnly: false, ignores: ["/^v-/", "/^router-/", "template", "slot", "component", "transition"] }],
 		"vue/match-component-file-name": ["error", { extensions: ["js", "vue"], shouldMatchCase: true }],
 		"vue/no-boolean-default": ["error", "default-false"],
