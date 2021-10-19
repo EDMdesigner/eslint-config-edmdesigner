@@ -148,6 +148,7 @@ module.exports = {
 		"vue/v-slot-style": ["error", { atComponent: "v-slot", default: "shorthand", named: "shorthand" }],
 		"vue/valid-v-slot": "error",
 		"vue/script-indent": ["error", "tab", { switchCase: 1 }],
+		"vue/html-end-tags": "off", // fix conflict with vue/html-self-closing
 	},
 	overrides: [
 		{
