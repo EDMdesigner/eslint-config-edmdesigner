@@ -12,6 +12,17 @@ pipeline {
 				}
 			}
 		}
+		stage('environment branch') {
+			when {
+				branch "environment/**"
+			}
+			steps {
+				sh 'npm run semverCheck'
+				withNPM(npmrcConfig:'npmrc-github') {
+					sh 'npm publish'
+				}
+			}
+		}
 		stage('NPM publish [master]') {
 			when {
 				branch "master"

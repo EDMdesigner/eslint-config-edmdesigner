@@ -164,9 +164,10 @@ module.exports = {
 				"**/__mocks__/*.js",
 			],
 			env: {
-				jest: true,
+				"jest/globals": true,
 			},
 			plugins: [ "jest" ],
+			extends: ["plugin:jest/recommended"],
 			rules: {
 				"max-statements": "off",
 				"jest/consistent-test-it": "error",
