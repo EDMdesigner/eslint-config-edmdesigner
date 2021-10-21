@@ -164,9 +164,10 @@ module.exports = {
 				"**/__mocks__/*.js",
 			],
 			env: {
-				jest: true,
+				"jest/globals": true,
 			},
 			plugins: [ "jest" ],
+			extends: ["plugin:jest/recommended"],
 			rules: {
 				"max-statements": "off",
 				"jest/consistent-test-it": "error",
@@ -181,20 +182,20 @@ module.exports = {
 				"jest/no-jest-import": "error",
 				"jest/no-mocks-import": "error",
 				"jest/no-standalone-expect": "error",
-				"jest/no-test-callback": "error",
+				// "jest/no-test-callback": "error", deprecated
 				"jest/no-test-prefixes": "error",
 				"jest/no-test-return-statement": "error",
-				"jest/no-truthy-falsy": "error",
-				"jest/no-try-expect": "error",
+				// "jest/no-truthy-falsy": "error", deprecated
+				//"jest/no-try-expect": "error", deprecated
 				"jest/prefer-called-with": "error",
 				"jest/prefer-strict-equal": "error",
-				"jest/prefer-to-be-null": "error",
-				"jest/prefer-to-be-undefined": "error",
+				// jest/prefer-to-be-null": "error", deprecated
+				// "jest/prefer-to-be-undefined": "error", deprecated
 				"jest/prefer-to-contain": "error",
 				"jest/prefer-to-have-length": "error",
 				"jest/prefer-todo": "error",
 				"jest/require-top-level-describe": "error",
-				"jest/valid-describe": "error",
+				// "jest/valid-describe": "error", deprecated
 				"jest/valid-expect-in-promise": "error",
 				"jest/valid-expect": "error",
 				"jest/valid-title": "error",
