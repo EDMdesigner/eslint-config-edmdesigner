@@ -54,7 +54,7 @@ module.exports = {
 		"vue/script-indent": ["error", "tab"],
 
 		"no-multiple-empty-lines": ["error", { max: 1, maxBOF: 0, maxEOF: 0 }],
-		"lines-between-class-members": ["error", "always"],
+		"lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
 		"padded-blocks": ["error", "never"],
 
 		"no-multi-spaces": ["error", { exceptions: { Property: false } }],
