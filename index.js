@@ -1,8 +1,10 @@
 module.exports = {
 	root: true,
 	parserOptions: {
-		ecmaVersion: 8,
-		parser: "babel-eslint",
+		parser: "@babel/eslint-parser",
+		// the env overrides this param
+		// see: https://eslint.org/docs/user-guide/configuring/language-options#specifying-parser-options
+		ecmaVersion: "latest",
 	},
 	env: {
 		es6: true,
@@ -29,7 +31,7 @@ module.exports = {
 		curly: ["error", "multi-line"],
 		eqeqeq: "error",
 		"vue/eqeqeq": "error",
-		"no-implicit-coercion": ["error", { allow: [ "!!" ] }],
+		"no-implicit-coercion": ["error", { allow: ["!!"] }],
 
 		// COMPLEXITY
 
@@ -152,7 +154,7 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: [ "*.vue" ],
+			files: ["*.vue"],
 			rules: {
 				"max-len": "off",
 			},
@@ -166,7 +168,7 @@ module.exports = {
 			env: {
 				"jest/globals": true,
 			},
-			plugins: [ "jest" ],
+			plugins: ["jest"],
 			extends: ["plugin:jest/recommended"],
 			rules: {
 				"max-statements": "off",

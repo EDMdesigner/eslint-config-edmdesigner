@@ -1,6 +1,6 @@
 {
 	"name": "@EDMdesigner/eslint-config-edmdesigner",
-	"version": "2.1.2",
+	"version": "2.1.2-newDeps.1",
 	"description": "ESlint base config for EDMdesigner repositories",
 	"main": "index.js",
 	"author": "Turbo",
@@ -13,9 +13,10 @@
 		"semverCheck": "node scripts/semverCheck.js"
 	},
 	"dependencies": {
-		"babel-eslint": "^10.1.0",
-		"eslint": "^7.32.0",
-		"eslint-plugin-jest": "^25.2.2",
+		"@babel/core": "^7.17.5",
+		"@babel/eslint-parser": "^7.17.0",
+		"eslint": "^8.9.0",
+		"eslint-plugin-jest": "^26.1.1",
 		"eslint-plugin-json": "^3.1.0",
 		"eslint-plugin-vue": "^7.20.0"
 	}
