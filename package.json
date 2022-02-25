@@ -1,6 +1,6 @@
 {
 	"name": "@EDMdesigner/eslint-config-edmdesigner",
-	"version": "2.1.3",
+	"version": "2.1.4",
 	"description": "ESlint base config for EDMdesigner repositories",
 	"keywords": [
 		"eslint",
@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@babel/core": "^7.17.5",
 		"@babel/eslint-parser": "^7.17.0",
-		"eslint": "^8.9.0",
+		"eslint": "^7.32.0",
 		"eslint-plugin-jest": "^26.1.1",
 		"eslint-plugin-json": "^3.1.0",
 		"eslint-plugin-vue": "^7.20.0"
