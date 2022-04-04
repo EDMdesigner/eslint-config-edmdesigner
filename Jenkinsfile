@@ -2,7 +2,7 @@
 pipeline {
 	agent any
 	tools {
-		nodejs 'Node 8.10.0'
+		nodejs 'Node 16'
 	}
 	stages {
 		stage('build') {
@@ -19,7 +19,7 @@ pipeline {
 			steps {
 				sh 'npm run semverCheck'
 				withNPM(npmrcConfig:'npmrc-github') {
-					sh 'npm publish'
+					sh 'npm publish --tag next'
 				}
 			}
 		}
