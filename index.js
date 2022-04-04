@@ -25,7 +25,8 @@ module.exports = {
 		"no-use-before-define": ["error", { functions: false }],
 		"no-param-reassign": ["error", { "props": false }],
 		"no-return-assign": ["error", "always"],
-		"no-await-in-loop": "error",
+		"no-await-in-loop": "off", // We often need this so this should be disabled
+		"no-useless-escape": "off", // We often use the escaped regex so this should be disabled
 		curly: ["error", "multi-line"],
 		eqeqeq: "error",
 		"vue/eqeqeq": "error",
