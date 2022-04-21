@@ -94,7 +94,7 @@ pipeline {
 			}
 			steps {
 				withNPM(npmrcConfig:'npmrc-global') {
-					sh 'npm publish'
+					sh 'npm publish --access public'
 				}
 			}
 		}
