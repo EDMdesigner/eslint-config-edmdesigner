@@ -1,20 +1,77 @@
-
+skipRemainingStages = false
 pipeline {
 	agent any
 	tools {
 		nodejs 'Node 16'
 	}
 	stages {
-		stage('build') {
+		stage('pr check') {
+			when {
+				changeRequest target: 'master'
+			}
+			steps {
+				sh '''
+					#!/bin/sh
+					echo $CHANGE_BRANCH
+					if echo "$CHANGE_BRANCH" | grep -Eq '^release/.+';
+					then
+						exit 0
+					else
+						echo 'You can merge to the master branch only from the release/* branches!'
+						exit 1
+					fi
+				'''
+			}
+		}
+		stage('pr build skipper') {
+			when {
+				changeRequest()
+			}
+			steps {
+				script {
+					skipRemainingStages = true
+					println "skipRemainingStages = ${skipRemainingStages}"
+				}
+			}
+		}
+		stage('install') {
+			when {
+				expression { !skipRemainingStages }
+			}
 			steps {
 				withNPM(npmrcConfig:'npmrc-github') {
 					sh 'npm install'
 				}
 			}
 		}
+		stage('test') {
+			when {
+				expression { !skipRemainingStages }
+			}
+			steps {
+				sh 'npm test'
+			}
+		}
+		stage('audit') {
+			when {
+				expression { !skipRemainingStages }
+			}
+			steps {
+				script {
+					try {
+						sh 'npm audit --production'
+					} catch (err) {
+						echo "npm audit found vulnerabilities but we're continuing the build"
+					}
+				}
+			}
+		}
 		stage('environment branch') {
 			when {
-				branch "environment/**"
+				allOf {
+					expression { !skipRemainingStages }
+					branch "environment/**"
+				}
 			}
 			steps {
 				sh 'npm run semverCheck'
@@ -23,12 +80,28 @@ pipeline {
 				}
 			}
 		}
-		stage('NPM publish [master]') {
+		stage('NPM publish to github pacakges') {
 			when {
-				branch "master"
+				allOf {
+					expression { !skipRemainingStages }
+					branch "master"
+				}
 			}
 			steps {
 				withNPM(npmrcConfig:'npmrc-github') {
+					sh 'npm publish'
+				}
+			}
+		}
+		stage('NPM publish to npmjs.com') {
+			when {
+				allOf {
+					expression { !skipRemainingStages }
+					branch "master"
+				}
+			}
+			steps {
+				withNPM(npmrcConfig:'npmrc-global') {
 					sh 'npm publish'
 				}
 			}

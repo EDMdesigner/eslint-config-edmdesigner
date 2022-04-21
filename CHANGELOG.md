@@ -1,0 +1,9 @@
+# Changelog
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+## [2.1.7] 2022-04-21
+### Added
+- .npmigore to exclude Jenkinsfile and scripts folder
+
+### Changed
+- publish to npmjs.com as well
