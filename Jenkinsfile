@@ -44,14 +44,6 @@ pipeline {
 				}
 			}
 		}
-		stage('test') {
-			when {
-				expression { !skipRemainingStages }
-			}
-			steps {
-				sh 'npm test'
-			}
-		}
 		stage('audit') {
 			when {
 				expression { !skipRemainingStages }
