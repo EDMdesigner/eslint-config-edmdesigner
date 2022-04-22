@@ -94,10 +94,11 @@ pipeline {
 			}
 			steps {
 				script {
-					sh """sed -i 's/@EDMdesigner\/eslint-config-edmdesigner/@chamaileon-sdk\/eslint-config/' ./package.json"""
-					sh """sed -i 's/@EDMdesigner\/eslint-config-edmdesigner/@chamaileon-sdk\/eslint-config/' ./README.md"""
-
-					sh """sed -i 's/ESlint base config for EDMdesigner repositories/ESlint base config for Chamaileon SDK repositories/' ./package.json"""
+					sh """#!/bin/bash
+						sed -i 's/@EDMdesigner\/eslint-config-edmdesigner/@chamaileon-sdk\/eslint-config/' ./package.json
+						sed -i 's/@EDMdesigner\/eslint-config-edmdesigner/@chamaileon-sdk\/eslint-config/' ./README.md
+						sed -i 's/ESlint base config for EDMdesigner repositories/ESlint base config for Chamaileon SDK repositories/' ./package.json
+					"""
 
 					withNPM(npmrcConfig:'npmrc-chamaileon-sdk') {
 						sh 'npm publish --access public'
