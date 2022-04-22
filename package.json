@@ -1,7 +1,7 @@
 {
-	"name": "@chamaileon-sdk/eslint-config",
+	"name": "@EDMdesigner/eslint-config-edmdesigner",
 	"version": "2.1.9",
-	"description": "ESlint base config for Chamaileon SDK repositories",
+	"description": "ESlint base config for EDMdesigner repositories",
 	"keywords": [
 		"eslint",
 		"eslint-config"
