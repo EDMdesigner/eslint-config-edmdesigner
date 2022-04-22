@@ -1,4 +1,4 @@
-# eslint-config-edmdesigner
+# Chamaileon eslint config
 
 Config is still under refinement, subject to change.
 
